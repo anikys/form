@@ -1,0 +1,80 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ua">
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+	<title>form</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/select.css" />
+	<!-- Кодировка страницы -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width">
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+	<div class="wrapper">
+		<div class="form">
+			<form action="#" method="post" id="form" class="form__body">
+				<h1 class="form__title">Відправити на почту</h1>
+				<div class="form__item">
+					<label for="formName" class="form__label">Ім'я*:</label>
+					<input id="formName" name="name" type="text" class="form__input req">
+				</div>
+				<div class="form__item">
+					<label for="formEmail" class="form__label">Email*:</label>
+					<input id="formEmail" name="email" type="text" class="form__input req email">
+				</div>
+				<div class="form__item">
+					<div class="form__label">Лівша чи правша?</div>
+					<div class="options">
+						<div class="options__item">
+							<input id="formRightHanded" checked type="radio" value="right" name="hand" type="text" class="options__input">
+							<label for="formRightHanded" class="options__label">Правша</label>
+						</div>
+						<div class="options__item">
+							<input id="formLeftHanded" type="radio" value="left" name="hand" type="text" class="options__input">
+							<label for="formLeftHanded" class="options__label">Лівша</label>
+						</div>
+					</div>
+				</div>
+				<div class="form__item">
+					<label for="formMessage" class="form__label">Повідомлення:</label>
+					<textarea name="message" id="formMessage" class="form__input"></textarea>
+				</div>
+				<div class="form__item">
+					<div class="form__label">Вік:</div>
+					<select name="age" id="" class="form__select">
+						<option value="від 18 до 25" selected>Молодий</option>
+						<option value="від 25 до 45">Старий</option>
+						<option value="від 45">Супур старий</option>
+					</select>
+				</div>
+				<div class="form__item">
+					<div class="form__label">Прикріпити фаїл</div>
+					<div class="file">
+						<div class="file__item">
+							<input id="formImage" type="file" accept=".jpg, .png, .gif" name="image" class="file__input">
+							<div class="file__button">Вибрати</div>
+						</div>
+						<div id="formPreview" class="file__preview"></div>
+					</div>
+				</div>
+				<div class="form__item">
+					<div class="checkbox">
+						<input id="formAggreement" checked type="checkbox" name="agreement" class="checkbox__input req">
+						<label for="formAggreement" class="checkbox__label"><span>Я даю свою згоду на обробку моїх данних згідно <a href="">правил</a> *</span> </label>
+					</div>
+				</div>
+				<button type="submit" class="form__button">Відправити</button>
+			</form>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="/js/select.js"></script>
+	<!-- <script src="/js/jquery.parallax.js"></script> -->
+	<script src="/js/script.js"></script>
+	</body>
+</html>
